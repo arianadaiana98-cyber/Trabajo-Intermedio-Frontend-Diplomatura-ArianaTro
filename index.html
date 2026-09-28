@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header>
+            <div class="header__superior">
+                <div class="header__superior--letra">
+                    <div class="header__superior--letra--direccion">
+                        <i class="bi bi-geo-alt-fill"></i>
+                        <span>Dirección 123</span>
+                    </div>
+                    <div class="header__superior--letra--horario">
+                        <i class="bi bi-clock-fill"></i>
+                        <span>Lun a Vie 8:00 a 18:00 hs</span>
+                    </div>
+                </div>
+                <div class="header__superior--letra">
+                    <div class="header__superior--letra--telefono">
+                        <i class="bi bi-telephone-fill"></i>
+                        <span>11-3305-4139</span>
+                    </div>
+                    <span class="header__presupuesto">Cotización sin cargo</span>
+                </div>
+            </div>
+        <div class="header__inferior">
+            <div class="header__inferior--logo--text">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="20 8 220 224" width="220" height="224" role="img" aria-label="Logo B de Bahía plateada" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTplNTJkZTYyOS00MGFkLTQwNGQtYmNlNS04NmRmNzFhN2UyYzAAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaPKZbcMzZ2j5FlXT8P6sH6UAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo1ZDEzNzNjMi1lNzQ0LTQxNTUtYTE5NS0yZmQ0OTA5ZjFiOTBscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoqD9c5C2t+m+/hr3VWygpmQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggZTgS4oKnw+6ka5EaWajucv10tqsiF633FCE5RWDqqBmkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaDlhGnLCPpTy/0wTWZcPKLYAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCB7GPoRuB7IkeHh+u/kqfTY1jMFeo7v8zZudj7xa0KbPmRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjJZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmU1MmRlNjI5LTQwYWQtNDA0ZC1iY2U1LTg2ZGY3MWE3ZTJjMC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmUwZTJkNGY1LTY4Y2QtNDljNS1hN2QwLTIwMDNmYTk1NzBmM3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBlOBLigqfD7qRrkRpZqO5y/XS2qyIXrfcUITlFYOqoGaJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggD4aTVYEB/Yx44vFMIaEtj+lUAeKzi3xyV85Y6Ez/ANyiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggRabspRAcdCFKj7PlwUB6kX8Ckh0SmZ1IMJPuPIZx+nZ0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQJpITI8evxQriLdJDe1c6IuKGCDno5x6LWA+PVb/on8PqSjTcMEGvdf2IL+2X81YIhFVuBv4PekJ60igkvO9kHk=</c2pa:manifest></metadata>
+  <defs>
+    <linearGradient id="plata" gradientUnits="userSpaceOnUse" x1="40" y1="30" x2="175" y2="210">
+      <stop offset="0" stop-color="#5F666E"/>
+      <stop offset="0.3" stop-color="#D3D8DE"/>
+      <stop offset="0.5" stop-color="#838B94"/>
+      <stop offset="0.72" stop-color="#EEF1F4"/>
+      <stop offset="1" stop-color="#646B73"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#plata)">
+    <path d="M38 30 H74 V210 H38 V204 H50 V36 H38 Z"/>
+    <path fill-rule="evenodd" d="M74 30 H118 C140 30 156 45 156 73 C156 101 140 116 118 116 H74 Z
+                                  M74 42 H114 C129 42 137 55 137 74 C137 93 129 106 114 106 H74 Z"/>
+    <path fill-rule="evenodd" d="M74 110 H124 C150 110 170 128 170 160 C170 192 150 210 124 210 H74 Z
+                                  M74 120 H120 C139 120 149 136 149 158 C149 181 139 196 120 196 H74 Z"/>
+  </g>
+  <path d="M190 44 C191.6 58 194.5 61.5 210 64 C194.5 66.5 191.6 70 190 84 C188.4 70 185.5 66.5 170 64 C185.5 61.5 188.4 58 190 44Z" fill="#8C949D"/>
+  <path d="M216 18 C216.6 23.5 217.8 24.9 224 26 C217.8 27.1 216.6 28.5 216 34 C215.4 28.5 214.2 27.1 208 26 C214.2 24.9 215.4 23.5 216 18Z" fill="#B7BEC6"/>
+  <circle cx="212" cy="96" r="3.5" fill="#B7BEC6"/>
+</svg>
+                <div class="header__inferior--text">
+                    <span class="header__inferior--textlogo--bahia">BAHÍA</span>
+                    <span class="header__inferior--textlogo--deco">PULIDO Y CROMADO DE METALES</span>
+                </div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#antesydespues">Antes y Después</a></li>
+                    <li><a href="#elproceso">El proceso</a></li>
+                    <li><a href="#faqs">Preguntas Frecuentes</a></li>
+                    <li><a href="#form">Rellená el Formulario</a></li>
+                </ul>
+            </nav>
+            <div>
+                <button class="header__inferior--button"><a href="https://w.app/zwza8e">Pedir presupuesto</a></button>
+            </div>
+        </div>
+    </header>
+    <main class="fondo">
+        <section id="inicio">
+    <div>
+        <div class="inicio__div">
+                <div class="inicio__trabajos--panel">
+                    <div class="boton1">
+                        <i class="bi bi-geo-fill"></i>
+                        <span>Talleres en Ciudadela y Merlo</span>
+                    </div>
+                    <h1>Devolvemos el <span class="brillo">brillo</span> a tus piezas de metal</h1>
+                    <h3>Cromado, niquelado y pulido para autos, motos, grifería y piezas industriales. Envianos una foto y te mandamos el presupuesto.</h3>
+                    <div class="inicio__trabajos--panel--button">
+                        <div class="inicio__trabajos--panel--buttonstyle inicio__trabajos--panel--buttonfoto">
+                            <i class="bi bi-calculator-fill"></i>
+                            <button>Mandanos una foto</button>
+                        </div>
+                        <div class="inicio__trabajos--panel--buttonstyle">
+                            <i class="bi bi-magic"></i>
+                            <button>Ver trabajos</button>
+                        </div>
+                    </div>
+                    <div class="inicio__trabajos--panel--botonesinferiores">
+                        <div class="boton2">
+                            <i class="bi bi-check2"></i>
+                            <span>+5.000 Piezas Pulidas y Cromadas</span>
+                        </div>
+                        <div class="boton2">
+                            <i class="bi bi-check2"></i>
+                            <span>100% Garantía</span>
+                        </div>
+                        <div  class="boton2">
+                            <i class="bi bi-check2"></i>
+                            <span>Presupuesto por Foto</span>
+                        </div>
+                    </div>
+                </div>
+            <div class="carrusel">
+                <div class="carrusel__slider">
+                        <img src="./Imagenes/Pulido1.jpeg" alt="Imagen 1">
+                        <img src="./Imagenes/Pulido2.jpeg" alt="Imagen 2">
+                        <img src="./Imagenes/Pulido3.jpeg" alt="Imagen 3">
+                        <img src="./Imagenes/Pulido4.jpeg" alt="Imagen 4">
+                        <img src="./Imagenes/Pulido5.jpeg" alt="Imagen 5">
+                        <img src="./Imagenes/Pulido1.jpeg" alt="Imagen 1">
+                </div>
+            </div>
+        </div>
+        <div class="wpp-cont">
+            <a href="https://w.app/zwza8e" class="wpp-btn"><i class="bi bi-whatsapp"></i></a>
+        </div>
+    </div>
+        </section>
+        <section id="servicios">
+            <div class="divisorsection">
+                <div class="nuestrosservicios__cont__text">
+                <span class="text__spanppal">ESPECIALIDADES DEL TALLER</span>
+                <h2>Nuestros servicios de Pulido y Baño Galvánico</h2>
+                <span class="text__span2">Combinamos procesos químicos de alta pureza y artesanía manual con ruedas de paño y pastas diamantadas para entregar acabados cristalinos de alta durabilidad.</span>
+                </div>
+                <div class="nuestrosservicios__cont__tarjetas">
+                    <div class="nuestrosservicios__cont__tarjeta1">
+                        <img src="./Imagenes/Pulido1.jpeg" alt="Imagen Cromado" class="">
+                        <div class="nuestrosservicios__cont__tarjeta1__texto">
+                            <h3>NIQUELADO</h3>
+                            <span>Terminación brillante o satinada, ideal para herrajes y piezas de uso diario</span>
+                        </div>
+                    </div>
+                    <div class="nuestrosservicios__cont__tarjeta1">
+                        <img src="./Imagenes/Pulido2.jpeg" alt="Imagen Niquelado" class="">
+                        <div class="nuestrosservicios__cont__tarjeta1__texto">
+                            <h3>NIQUELADO</h3>
+                            <span>Terminación brillante o satinada, ideal para herrajes y piezas de uso diario</span>
+                        </div>
+                    </div>
+                    <div class="nuestrosservicios__cont__tarjeta1">
+                        <img src="./Imagenes/Pulido3.jpeg" alt="Imagen Pulido" class="">
+                        <div class="nuestrosservicios__cont__tarjeta1__texto">
+                            <h3>NIQUELADO</h3>
+                            <span>Terminación brillante o satinada, ideal para herrajes y piezas de uso diario</span>
+                        </div>                    </div>
+                    <div class="nuestrosservicios__cont__tarjeta1">
+                        <img src="./Imagenes/Pulido4.jpeg" alt="Piezas de bronce" class="">
+                        <div class="nuestrosservicios__cont__tarjeta1__texto">
+                            <h3>NIQUELADO</h3>
+                            <span>Terminación brillante o satinada, ideal para herrajes y piezas de uso diario</span>
+                        </div>                    </div>
+                    <div class="nuestrosservicios__cont__tarjeta1">
+                        <img src="./Imagenes/Pulido5.jpeg" alt="Piezas automotrices" class="">
+                        <div class="nuestrosservicios__cont__tarjeta1__texto">
+                            <h3>NIQUELADO</h3>
+                            <span>Terminación brillante o satinada, ideal para herrajes y piezas de uso diario</span>
+                        </div>                    </div>
+                    <div class="nuestrosservicios__cont__tarjeta1"  >
+                        <img src="./Imagenes/Pulido1.jpeg" alt="Grifería" class="">
+                        <div class="nuestrosservicios__cont__tarjeta1__texto">
+                            <h3>NIQUELADO</h3>
+                            <span>Terminación brillante o satinada, ideal para herrajes y piezas de uso diario</span>
+                        </div>                    
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="antesydespues">
+            <div class="divisorpanelppal">
+                <div class="divisorpanel">
+                    <div class="pasoapaso__cont__text">
+                        <span class="text__spanppal__antesdespues">TRANSFORMACIÓN REAL</span>
+                        <h2>Así se ve el antes y el después de nuestros trabajos.</h2>
+                        <span class="textspan3">Muchas piezas que parecen descartadas por óxido, golpes o desgaste pueden recuperar su brillo original o incluso lucir mejor que de fábrica.</span>
+                    </div>
+                    <div class="pasoapasocard1  ">
+                        <div class="pasoapasocard__title">
+                            <i class="bi bi-list-check"></i>
+                            <span>Pasos aplicados a esta pieza</span>
+                        </div>
+                        <ol>
+                            <li>Decapado electrolítico del cromo viejo quemado.</li>
+                            <li>Esmerilado progresivo con lijas de grano 120 a 1200 para quitar poros.</li>
+                            <li>Pulido con ruedas de sisal y pastas de alto brillo.</li>
+                            <li>Baño galvánico de cobre nivelador, níquel y terminación cromo espejo</li>
+                        </ol>
+                    </div>
+                </div>
+                    <div class="antesydespues">
+                        <div class="cardantesdespues">
+                            <img src="./Imagenes/salidamotorantes.jpeg" alt="Salida de motor antes">
+                        </div>
+                        <div class="cardantesdespues">
+                            <img src="./Imagenes/salidamotordespues.jpeg" alt="Salida de motor después">
+                        </div>
+                    </div>
+            </div>
+        </section>
+        <section id="elproceso">
+            <div class="divisorsectionpasopaso">
+                <div class="nuestrosservicios__cont__text">
+                <span class="text__spanppal">METODOLOGÍA RIGUROSA</span>
+                <h2>Nuestro Proceso en 4 Etapas</h2>
+                <span class="text__span2">El brillo del cromado reside en el cuidado con el que tratamos la preparación. No salteamos ningún paso.</span>
+                </div>
+                <div class="pasoapaso">
+                    <div class="pasoapasocard">
+                        <div class="divisornumeropasoapaso">
+                            <i class="bi bi-flask-fill"></i>
+                        <span class="number">01</span>
+                        </div>
+                        <span>Decapado Químico</span>
+                        <p>Inmersión en tinas desengrasantes y decapantes específicos que eliminan barnices viejos, óxidos y sulfatos sin agredir el espesor de la chapa.</p>
+                    </div>
+                    <div class="pasoapasocard">
+                        <div class="divisornumeropasoapaso">
+                            <i class="bi bi-arrow-repeat"></i>
+                        <span class="number">02</span>
+                        </div>
+                        <span>Decapado Químico</span>
+                        <p>Inmersión en tinas desengrasantes y decapantes específicos que eliminan barnices viejos, óxidos y sulfatos sin agredir el espesor de la chapa.</p>
+                    </div>
+                    <div class="pasoapasocard">
+                        <div class="divisornumeropasoapaso">
+                            <i class="bi bi-lightning-charge-fill"></i>
+                        <span class="number">03</span>
+                        </div>
+                        <span>Decapado Químico</span>
+                        <p>Inmersión en tinas desengrasantes y decapantes específicos que eliminan barnices viejos, óxidos y sulfatos sin agredir el espesor de la chapa.</p>
+                    </div>
+                    <div class="pasoapasocard">
+                        <div class="divisornumeropasoapaso">
+                        <i class="bi bi-box2-fill"></i>
+                        <span class="number">04</span>
+                        </div>
+                        <span>Decapado Químico</span>
+                        <p>Inmersión en tinas desengrasantes y decapantes específicos que eliminan barnices viejos, óxidos y sulfatos sin agredir el espesor de la chapa.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="faqs" class="divisorsection">
+            <div class="nuestrosservicios__cont__text">
+                <span class="text__spanppal">RESOLVEMOS TUS DUDAS</span>
+                <h2>Preguntas Frecuentes</h2>
+            </div>
+            <div class="faq-container">
+                <details class="faq-item">
+                <summary class="faq-question">¿Qué metales se pueden cromar y pulir en el taller?
+                    <span class="faq-arrow"></span>
+                </summary>
+            <div class="faq-answer">
+                <p>Trabajamos sobre hierro, acero común, acero inoxidable, cobre, bronce y fundición de aluminio. En piezas de plástico (ABS) es necesario realizar previamente un tratamiento químico especial de conductividad.</p>
+            </div>
+                </details>
+                <details class="faq-item">
+                <summary class="faq-question">¿Cuanto tiempo demora la restauración de una pieza?
+                    <span class="faq-arrow"></span>
+                </summary>
+            <div class="faq-answer">
+                <p>El tiempo promedio para piezas normales es de 7 a 14 días hábiles. Si la pieza requiere remoción de cromo viejo deteriorado, desabollado o soldaduras de relleno con estaño, el plazo se coordina en el presupuesto.</p>
+                </div>
+                </details>
+                <details class="faq-item">
+                <summary class="faq-question">¿Reciben y envían piezas desde otras ciudades o provincias?
+                    <span class="faq-arrow"></span>
+                </summary>
+            <div class="faq-answer">
+                <p>Sí, recibimos encomiendas de todo el país a través de empresas como Vía Cargo, Andreani, OCA y transportes de carga. Al finalizar, embalamos cada pieza con film de burbujas reforzado y cartón protector para asegurar que llegue sin la menor marca.</p>
+            </div>
+                </details>
+            </div>
+        </section>
+        <section id="form">
+            
+            <div class="divisorsection divisorformulario">
+                <div class="cardformulario">
+                <div class="nuestrosservicios__cont__text">
+                <span class="text__spanppal buttonpresupuesto">PRESUPUESTOS RÁPIDOS</span>
+                <h2>Cotizá la Restauración de tu Pieza</h2>
+                <span class="text__span2">Completa los datos a continuación. Te responderemos en menos de 24 horas con un valor estimado y los tiempos de entrega</span>
+                </div>
+                    <form class="formulario">
+                        <div class="form-group">
+                            <label>NOMBRE Y APELLIDO<span class="obligatorio">*</span></label>
+                            <input type="text" placeholder="Ej: Juan Pérez" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label>TELÉFONO / WHATSAPP <span class="obligatorio">*</span></label>
+                            <input type="tel" placeholder="Ej: +54 9 11 1234-5678" required>
+                        </div>
+    
+                        <div class="form-group">
+                            <label>CORREO ELECTRÓNICO</label>
+                            <input type="email" placeholder="juan@ejemplo.com">
+                        </div>
+
+                        <div class="form-group">
+                            <label>TRATAMIENTO REQUERIDO<span class="obligatorio">*</span></label>
+                            <div class="selector">
+                                <select required>
+                                    <option value="" disabled selected>Selecciona un tipo de trabajo...</option>
+                                    <option value="Cromado">Cromado</option>
+                                    <option value="Pulido">Pulido</option>
+                                    <option value="Niquelado">Niquelado</option>
+                                    <option value="Otro tratamiento">Otro tratamiento (Indicar cuál)</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>MATERIAL DE BASE (SI SE CONOCE)</label>
+                            <input type="text" placeholder="Ej: Hierro, Fundición, Aluminio, Bronce">
+                        </div>
+
+                        <div class="form-group">
+                            <label>CANTIDAD DE PIEZAS APROXIMADA</label>    
+                            <input type="number" value="1" min="1">
+                        </div>
+                    
+                        <div class="form-group campo-ancho-form">
+                            <label>DESCRIPCIÓN DE LA PIEZA Y ESTADO ACTUAL<span class="obligatorio">*</span></label>
+                            <textarea placeholder="Indicá qué pieza es, si presenta abolladuras, picaduras profundas o tratamientos anteriores" rows="5" required></textarea>
+                        </div>
+
+                        <div class="form-group campo-ancho-form">
+                            <label>ADJUNTAR FOTO DE LA PIEZA (OPCIONAL PERO RECOMENDADO)</label>
+                            <div class="adjunto">
+                                <input type="file" id="subida-adjunto" accept="image/*" style="display:none">
+                                <label for="subida-adjunto" class="adjunto-label">
+                                    <div class="icono-adjunto">
+                                        <i class="bi bi-cloud-arrow-up-fill"></i>
+                                        <span class="adjunto1">Hacé clic para seleccionar una foto o arrastrala aquí</span>
+                                        <span class="adjunto2">Formatos JPG/PNG hasta 10MB</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+            <div class="footerprincipal">
+                    <div class="footer1">
+                        <div class="logofooter">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="20 8 220 224" width="220" height="224" role="img" aria-label="Logo B de Bahía plateada" xmlns:c2pa="http://c2pa.org/manifest"><metadata><c2pa:manifest>AAAWgmp1bWIAAAAeanVtZGMycGEAEQAQgAAAqgA4m3EDYzJwYQAAABZcanVtYgAAAEdqdW1kYzJtYQARABCAAACqADibcQN1cm46YzJwYTplNTJkZTYyOS00MGFkLTQwNGQtYmNlNS04NmRmNzFhN2UyYzAAAAADl2p1bWIAAAApanVtZGMyYXMAEQAQgAAAqgA4m3EDYzJwYS5hc3NlcnRpb25zAAAAALxqdW1iAAAARGp1bWRjYm9yABEAEIAAAKoAOJtxE2MycGEuaW5ncmVkaWVudC52MwAAAAAYYzJzaPKZbcMzZ2j5FlXT8P6sH6UAAABwY2JvcqNpZGM6Zm9ybWF0bWltYWdlL3N2Zyt4bWxqaW5zdGFuY2VJRHgseG1wOmlpZDo1ZDEzNzNjMi1lNzQ0LTQxNTUtYTE5NS0yZmQ0OTA5ZjFiOTBscmVsYXRpb25zaGlwaHBhcmVudE9mAAAB4mp1bWIAAABBanVtZGNib3IAEQAQgAAAqgA4m3ETYzJwYS5hY3Rpb25zLnYyAAAAABhjMnNoqD9c5C2t+m+/hr3VWygpmQAAAZljYm9yomdhY3Rpb25zgqJmYWN0aW9ua2MycGEub3BlbmVkanBhcmFtZXRlcnOha2luZ3JlZGllbnRzgaJjdXJseC1zZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmluZ3JlZGllbnQudjNkaGFzaFggZTgS4oKnw+6ka5EaWajucv10tqsiF633FCE5RWDqqBmkZmFjdGlvbngdY29tLmFudGhyb3BpYy5jbGF1ZGUucHJvdmlkZWRqcGFyYW1ldGVyc6F4H2NvbS5hbnRocm9waWMub3JpZ2luLWNvbmZpZGVuY2VndW5rbm93bmtkZXNjcmlwdGlvbnhmQ2xhdWRlIHByb3ZpZGVkIHRoaXMgZmlsZSBhdCB0aGUgcmVxdWVzdCBvZiBhIHVzZXIgYW5kIG1heSBoYXZlIGNyZWF0ZWQgb3IgbW9kaWZpZWQgdGhlIGZpbGUgY29udGVudHMubXNvZnR3YXJlQWdlbnShZG5hbWVmQ2xhdWRlcmFsbEFjdGlvbnNJbmNsdWRlZPUAAADIanVtYgAAAEBqdW1kY2JvcgARABCAAACqADibcRNjMnBhLmhhc2guZGF0YQAAAAAYYzJzaDlhGnLCPpTy/0wTWZcPKLYAAACAY2JvcqVjYWxnZnNoYTI1NmNwYWRNAAAAAAAAAAAAAAAAAGRoYXNoWCB7GPoRuB7IkeHh+u/kqfTY1jMFeo7v8zZudj7xa0KbPmRuYW1lbmp1bWJmIG1hbmlmZXN0amV4Y2x1c2lvbnOBomVzdGFydBjJZmxlbmd0aBkeBAAAAj5qdW1iAAAAJ2p1bWRjMmNsABEAEIAAAKoAOJtxA2MycGEuY2xhaW0udjIAAAACD2Nib3KlY2FsZ2ZzaGEyNTZpc2lnbmF0dXJleE1zZWxmI2p1bWJmPS9jMnBhL3VybjpjMnBhOmU1MmRlNjI5LTQwYWQtNDA0ZC1iY2U1LTg2ZGY3MWE3ZTJjMC9jMnBhLnNpZ25hdHVyZWppbnN0YW5jZUlEeCx4bXA6aWlkOmUwZTJkNGY1LTY4Y2QtNDljNS1hN2QwLTIwMDNmYTk1NzBmM3JjcmVhdGVkX2Fzc2VydGlvbnODomN1cmx4LXNlbGYjanVtYmY9YzJwYS5hc3NlcnRpb25zL2MycGEuaW5ncmVkaWVudC52M2RoYXNoWCBlOBLigqfD7qRrkRpZqO5y/XS2qyIXrfcUITlFYOqoGaJjdXJseCpzZWxmI2p1bWJmPWMycGEuYXNzZXJ0aW9ucy9jMnBhLmFjdGlvbnMudjJkaGFzaFggD4aTVYEB/Yx44vFMIaEtj+lUAeKzi3xyV85Y6Ez/ANyiY3VybHgpc2VsZiNqdW1iZj1jMnBhLmFzc2VydGlvbnMvYzJwYS5oYXNoLmRhdGFkaGFzaFggRabspRAcdCFKj7PlwUB6kX8Ckh0SmZ1IMJPuPIZx+nZ0Y2xhaW1fZ2VuZXJhdG9yX2luZm+jZG5hbWVvQW50aHJvcGljIEZpbGVzZ3ZlcnNpb25lMS4wLjBrc3BlY1ZlcnNpb25lMi40LjAAABA4anVtYgAAAChqdW1kYzJjcwARABCAAACqADibcQNjMnBhLnNpZ25hdHVyZQAAABAIY2JvctKEWQISogEmGCFZAgowggIGMIIBjaADAgECAhRA5aAK7sI50L64g/oGQgU9Z1UTADAKBggqhkjOPQQDAzBJMRcwFQYDVQQKEw5BbnRocm9waWMsIFBCQzEuMCwGA1UEAxMlQW50aHJvcGljIENvbnRlbnQgQ3JlZGVudGlhbHMgUm9vdCBDQTAeFw0yNjA4MDcxODQzNTZaFw0yODA4MDYxOTQzNTZaMEQxFzAVBgNVBAoTDkFudGhyb3BpYywgUEJDMSkwJwYDVQQDEyBBbnRocm9waWMgQ2xhdWRlIENvbnRlbnQgU2lnbmluZzBZMBMGByqGSM49AgEGCCqGSM49AwEHA0IABJh6CmvLUBgFFNU0vUKlOVtE6djd17L5SuwX0LemFisBM3dkd/3cyjxFA3Qo5S46fX0/ihY0VZ7mfb9KF703t5OjWDBWMA4GA1UdDwEB/wQEAwIHgDAVBgNVHSUEDjAMBgorBgEEAYPoXgIBMAwGA1UdEwEB/wQCMAAwHwYDVR0jBBgwFoAUzlHiBIFOZFsj+OPEz5o+nMHXXMIwCgYIKoZIzj0EAwMDZwAwZAIwMXMdFJ4BetLLVY7ORuE9noqbbAZOZn/aArXyTwFAZfKrPzxF2vPoJNf1+UCdg1XGAjBwX1zd9WGqYkqmL5SFqw1QySjr1zJfpJM9+1rdDwSPLMOPOjKuiXjoU/pUUeG9RwmhY3BhZFkNngAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPZYQJpITI8evxQriLdJDe1c6IuKGCDno5x6LWA+PVb/on8PqSjTcMEGvdf2IL+2X81YIhFVuBv4PekJ60igkvO9kHk=</c2pa:manifest></metadata>
+  <defs>
+    <linearGradient id="plata" gradientUnits="userSpaceOnUse" x1="40" y1="30" x2="175" y2="210">
+      <stop offset="0" stop-color="#5F666E"/>
+      <stop offset="0.3" stop-color="#D3D8DE"/>
+      <stop offset="0.5" stop-color="#838B94"/>
+      <stop offset="0.72" stop-color="#EEF1F4"/>
+      <stop offset="1" stop-color="#646B73"/>
+    </linearGradient>
+  </defs>
+  <g fill="url(#plata)">
+    <path d="M38 30 H74 V210 H38 V204 H50 V36 H38 Z"/>
+    <path fill-rule="evenodd" d="M74 30 H118 C140 30 156 45 156 73 C156 101 140 116 118 116 H74 Z
+                                  M74 42 H114 C129 42 137 55 137 74 C137 93 129 106 114 106 H74 Z"/>
+    <path fill-rule="evenodd" d="M74 110 H124 C150 110 170 128 170 160 C170 192 150 210 124 210 H74 Z
+                                  M74 120 H120 C139 120 149 136 149 158 C149 181 139 196 120 196 H74 Z"/>
+  </g>
+  <path d="M190 44 C191.6 58 194.5 61.5 210 64 C194.5 66.5 191.6 70 190 84 C188.4 70 185.5 66.5 170 64 C185.5 61.5 188.4 58 190 44Z" fill="#8C949D"/>
+  <path d="M216 18 C216.6 23.5 217.8 24.9 224 26 C217.8 27.1 216.6 28.5 216 34 C215.4 28.5 214.2 27.1 208 26 C214.2 24.9 215.4 23.5 216 18Z" fill="#B7BEC6"/>
+  <circle cx="212" cy="96" r="3.5" fill="#B7BEC6"/>
+</svg>
+                        <div class="header__inferior--text--footer">
+                    <span class="header__inferior--textlogo--bahia">BAHÍA</span>
+                    <span class="header__inferior--textlogo--deco">PULIDO Y CROMADO DE METALES</span>
+                        </div>
+                        </div>
+                        <p>Taller artesanal de pulido mecánico y cromado galvánico de alta pureza. Calidad para exposición y durabilidad garantizada.</p>
+                        <div class="footer-redes">
+                            <i class="bi bi-instagram"></i>
+                            <i class="bi bi-messenger"></i>
+                            <i class="bi bi-youtube"></i>
+                        </div>
+                    </div>
+                    <nav class="footer-nav">
+                        <span class="span-footer">NAVEGACIÓN</span>
+                        <ol>
+                            <li><a href="#inicio">Inicio</a></li>
+                            <li><a href="#servicios">Servicios</a></li>
+                            <li><a href="#antesydespues">Antes y Después</a></li>
+                            <li><a href="#elproceso">Proceso de Trabajo</a></li>
+                            <li><a href="#form">Pedir Cotización</a></li>
+                        </ol>
+                    </nav>
+                    <div class="footer-nav nav-horarios">
+                        <span class="span-footer span-footer-hora">HORARIOS DEL TALLER</span>
+                        <div class="horarios">
+                        <div class="horario">
+                            <span>Lunes a Viernes:</span>
+                            <span><b>08:00 a 18:00 hs</b></span>
+                        </div>
+                        <div class="horario">
+                            <span>Lunes a Viernes:</span>
+                            <span><b>08:00 a 18:00 hs</b></span>
+                        </div>
+                        <div class="horario">
+                            <span>Lunes a Viernes:</span>
+                            <span><b>08:00 a 18:00 hs</b></span>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="contacto">
+                            <span class="span-footer">CONTACTO DIRECTO</span>
+                        <div class="icon-contact">
+                            <i class="bi bi-geo-alt-fill"></i>
+                            <span class="footercontact">Achával 262, Ciudadela</span>
+                        </div>
+                        <div class="icon-contact">
+                            <i class="bi bi-telephone-fill"></i>
+                            <span class="footercontact">+54 9 11 3305-4139</span>
+                        </div>
+                        <div class="icon-contact">
+                            <i class="bi bi-envelope-at"></i>
+                            <span class="footercontact">lealmarcelo1070@gmail.com</span>
+                        </div>
+                    </div>
+            </div>
+            <div class="header-inferior-buttom">
+                        <span>@Bahía - Pulido y Cromado. Todos los derechos reservados.</span>
+            </div>
+    </footer>
+</body>
+</html>
