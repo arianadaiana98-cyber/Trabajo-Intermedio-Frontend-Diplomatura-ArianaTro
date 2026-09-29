@@ -132,6 +132,15 @@ header{
     color:#CBD5E1
 }
 
+.btn-nav-icon .bi-list{
+  display: none;
+  background: none;
+  border: none;
+  color: #0056b3;
+  font-size: 30px;
+  cursor: pointer;
+}
+
 .header__inferior--textlogo--deco{
     font-size: 10px;
     color: #525252;
@@ -158,6 +167,10 @@ header{
     text-decoration: none;
     color: inherit;
  
+}
+
+.menu-phone{
+    display: contents;
 }
 
 .fondo{
@@ -664,7 +677,8 @@ main section + section{
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
     overflow:hidden;
     transition: box-shadow 0.3s ease;
-    width: 1000px;
+    width: 100%;
+    max-width: 1000px;
 }
 
 .faq-question {
@@ -713,8 +727,9 @@ main section + section{
 .cardformulario{
     border-radius:15px;
     border: solid 1px #474646;
-    width:800px;
-    height: 930px;
+    width: 100%;
+    max-width: 900px;
+    height: auto;
     padding:40px;
     
 }
@@ -846,6 +861,24 @@ main section + section{
 .adjunto2{
     font-size:10px;
     font-weight: 400;
+}
+
+
+.boton-enviar{
+    border-radius:10px;
+    background: linear-gradient(
+    135deg, 
+    #a8c7e5 10%, 
+    #dfdfdf 65%, 
+    #CBD5E1 95%);
+    color:#0056b3;
+    font-size:20px;
+    border: solid 1px #0056b3;
+    width: 100%;
+    height: 40px;
+    font-weight: 550;
+    cursor:pointer; 
+    margin-top:30px;    
 }
 
 .footerprincipal{
@@ -1024,6 +1057,61 @@ main section + section{
   transform: scale(1.1);
 }
 
+@media (max-width: 1024px){
+    .inicio__div{
+        gap:40px;
+    }
+
+    .inicio__trabajos--panel{
+        gap:35px;
+    }
+
+    .inicio__trabajos--panel h1{
+        font-size:44px;
+        letter-spacing: -2px;
+    }
+
+     .inicio__trabajos--panel--button,
+    .inicio__trabajos--panel--botonesinferiores{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .pasoapaso{
+        display: wrap;
+        gap: 10px;
+
+    }
+    .divisorpanelppal{
+        gap:30px;
+        flex-direction: column;
+        display: flex;
+    }
+
+    .pasoapasocard1{
+        width: 100%;
+        max-width: 500px;
+        height: auto;
+    
+    }
+
+    .antesydespues{
+        height: 450px;
+    }
+
+    .footerprincipal{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .horario, .footer1 p{
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+
 @media (max-width: 768px){
     .header__superior{
         height:auto;
@@ -1041,11 +1129,10 @@ main section + section{
        .header__inferior{   
         height: auto;
         flex-direction:column;
-        align-items:center;
         gap:10px;
         padding-bottom:10px;
         padding-top:5px;
-       }
+        }
        
        .header__inferior nav ul{
         padding-top:0;
@@ -1061,6 +1148,30 @@ main section + section{
        .header__inferior--button{
         margin-top:0;
        }
+
+       .btn-nav-icon .bi-list{
+        display:block;  
+       }
+
+       .btn-nav-icon ul a{
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background-color: #5b5757;
+        padding: 2px;
+        color:white;
+       }
+
+    .menu-phone{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;    
+    }
 
     .inicio__div{
         flex-direction: column;
@@ -1291,4 +1402,18 @@ main section + section{
     .footer1{
         grid-column: span 2;
     }
+
+    .boton-enviar{
+        font-size:15px;
+        margin:0;
+    }
+
+    .div-boton-enviar{
+        grid-column: 1/-1;
+    }
+
+    .header-inferior-buttom span{
+        font-size:10px;
+    }
 }
+
