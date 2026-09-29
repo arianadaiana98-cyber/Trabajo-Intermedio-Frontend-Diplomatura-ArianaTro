@@ -1023,3 +1023,272 @@ main section + section{
 .wpp-btn:hover {
   transform: scale(1.1);
 }
+
+@media (max-width: 768px){
+    .header__superior{
+        height:auto;
+        flex-direction:column;
+        align-items:center;
+        gap: 6px;
+        padding:8px 0;
+       }
+       .header__superior--letra{
+        margin-inline: 15px;
+        gap: 15px;
+        font-size:12px;
+       }
+    
+       .header__inferior{   
+        height: auto;
+        flex-direction:column;
+        align-items:center;
+        gap:10px;
+        padding-bottom:10px;
+        padding-top:5px;
+       }
+       
+       .header__inferior nav ul{
+        padding-top:0;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap:10px 20px;
+       }
+
+       .header__inferior nav a{
+        font-size:14px;
+       }
+
+       .header__inferior--button{
+        margin-top:0;
+       }
+
+    .inicio__div{
+        flex-direction: column;
+        height: auto;
+        align-items:center;
+        gap:40px;
+    }
+
+    .inicio__trabajos--panel{
+        width: 100%;
+        margin-left:0;
+        padding-inline:20px;
+        gap:30px;
+    }
+
+    .inicio__trabajos--panel h1{
+        font-size:36px;
+        letter-spacing:-1px;
+    }
+
+    .inicio__trabajos--panel h3{
+        font-size:16px;
+    }
+
+    .boton1{
+        top:0;
+        left:0;
+        font-size: 12px;
+    }
+
+    .inicio__trabajos--panel--button{
+        flex-direction: column;
+        align-self:stretch;
+        gap:15px;
+        text-align: center;
+    }
+
+    .inicio__trabajos--panel--buttonstyle button{
+        font-size:12px;
+        height: auto;
+        width: auto;
+    }
+
+    .inicio__trabajos--panel--botonesinferiores{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 20px;
+        font-size:13px;
+    }
+
+    .divisorsection{
+        margin-inline:20px;
+        padding-block: 30px;
+    }
+
+    .nuestrosservicios__cont__text{
+        padding-bottom: 30px;
+    }
+
+    .nuestrosservicios__cont__text h2{
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .carrusel{
+        width: calc(100% - 40px);
+        height: 300px;
+        margin-right: 0;
+    }
+
+    .text__span2{
+        font-size:13px;
+        letter-spacing: 0;
+    }
+
+    .text__spanppal{
+        font-size: 11px;
+    }
+
+    .text__spanppal__antesdespues{
+        font-size: 11px;
+    }
+
+    .nuestrosservicios__cont__tarjetas{
+        gap:20px;
+    }
+
+    .nuestrosservicios__cont__tarjeta1{
+        width: 100%;
+        max-width: 400px;
+        height: 280px;
+    }
+
+    .divisorpanelppal{
+        flex-direction: column;
+        margin-inline: 20px;
+        gap:30px;
+    }
+
+    .divisorpanel{
+        gap:20px;
+    }
+
+    .textspan3{
+        font-size: 13px;
+        letter-spacing: 0;
+    }
+
+    .pasoapaso__cont__text{
+        padding-top: 30px;
+    }
+
+    .text__spanppal__antesdespues{
+        padding:10px;
+    }
+
+    .pasoapasocard1{
+        width: 100%;
+        max-width: 450px;
+        height: auto;
+        padding: 15px;
+    }
+
+    .antesydespues{
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+        padding-top: 0px;
+    }
+
+    .cardantesdespues{
+        width: 100%;
+        height: 250px;
+    }
+    .divisorsectionpasopaso{
+        padding-block: 40px;
+        padding-inline: 20px;
+
+    }
+
+    .pasoapaso{
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .pasoapasocard{
+        width: 100%;
+        height: auto;
+        max-width: 250px;
+    }
+
+    .number{
+        font-size: 40px;
+    }
+
+    .pasoapasocard p{
+        padding-bottom: 0;
+    }
+
+    .faq-item{
+        width: 100%;
+    }
+
+    .faq-question{
+        padding: 15px;
+        font-size: 14px;
+        gap: 15px;
+    }
+
+    .faq-arrow{
+        flex-shrink: 0;
+    }
+
+    .faq-answer{
+        font-size: 13px;
+    }
+
+    .cardformulario{
+        width: 100%;
+        height: auto;
+        padding: 15px;
+    }
+
+    .text__spanppal.buttonpresupuesto{
+        width: auto;
+        height: auto;
+        font-size: 11px;
+        padding: 5px 12px;
+}
+
+    .formulario{
+        grid-row: 1fr;
+        row-gap: 18px;
+    }
+
+    .campo-ancho-form{
+        grid-column: auto;
+    }
+
+    .form-group label{
+        font-size: 10px;
+        margin-bottom: 4px;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="tel"],
+    .form-group input[type="email"],
+    .form-group input[type="number"],
+    .form-group select,
+    .form-group textarea{
+        font-size: 12px;
+        padding: 12px 14px;
+    }
+
+    .adjunto{
+        height: auto;
+        width: auto;
+        padding: 5px;
+    }
+
+    .footerprincipal{
+        display: flex;
+        flex-direction: column;
+        gap: 30px 20px;
+        padding: 20px;
+    }     
+
+    .footer1{
+        grid-column: span 2;
+    }
+}
